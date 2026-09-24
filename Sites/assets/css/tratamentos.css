@@ -1,0 +1,253 @@
+/* Estilos exclusivos da página de Tratamentos. */
+.treatments-page {
+    overflow-x: clip;
+    background: var(--color-off-white);
+}
+
+.treatments-hero {
+    padding-block: clamp(3.75rem, 8vw, 6.75rem);
+    border-bottom: 1px solid var(--color-border);
+    background:
+        radial-gradient(circle at 88% 20%, rgb(201 152 69 / 12%), transparent 24rem),
+        var(--color-cream);
+}
+
+.treatments-hero__inner {
+    max-width: 55rem;
+    text-align: center;
+}
+
+.treatments-hero .eyebrow {
+    margin-bottom: 0.75rem;
+}
+
+.treatments-hero h1 {
+    max-width: 50rem;
+    margin-inline: auto;
+    color: var(--color-wine-dark);
+    font-size: clamp(2.35rem, 6vw, 4.75rem);
+    line-height: 1.02;
+}
+
+.treatments-hero h1 + p {
+    max-width: 46rem;
+    margin: 1.25rem auto 0;
+    color: var(--color-text-muted);
+    font-size: clamp(1rem, 1.5vw, 1.125rem);
+    line-height: 1.7;
+}
+
+.treatments-catalog {
+    padding-block: clamp(3rem, 7vw, 6rem);
+}
+
+.treatments-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+}
+
+.treatment-option-card {
+    display: flex;
+    min-width: 0;
+    overflow: hidden;
+    flex-direction: column;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-white);
+    box-shadow: var(--shadow-xs);
+    transition:
+        border-color var(--transition-base),
+        box-shadow var(--transition-base),
+        transform var(--transition-base);
+}
+
+.treatment-option-card:hover {
+    border-color: rgb(122 24 48 / 24%);
+    box-shadow: var(--shadow-soft);
+    transform: translateY(-0.25rem);
+}
+
+.treatment-option-card__image {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 3 / 2;
+    background: var(--color-cream);
+}
+
+.treatment-option-card__image::after {
+    position: absolute;
+    inset: auto 0 0;
+    height: 30%;
+    background: linear-gradient(transparent, rgb(67 17 27 / 8%));
+    content: "";
+    pointer-events: none;
+}
+
+.treatment-option-card__image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 420ms ease;
+}
+
+.treatment-option-card:hover .treatment-option-card__image img {
+    transform: scale(1.025);
+}
+
+.treatment-option-card__content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.35rem;
+}
+
+.treatment-option-card h2 {
+    color: var(--color-wine-dark);
+    font-size: clamp(1.45rem, 4vw, 1.85rem);
+    line-height: 1.12;
+}
+
+.treatment-option-card p {
+    margin-top: 0.75rem;
+    color: var(--color-text-muted);
+    font-size: 0.9375rem;
+    line-height: 1.65;
+}
+
+.treatment-option-card__button {
+    display: inline-flex;
+    min-height: 3rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    margin-top: auto;
+    padding: 0.75rem 1rem;
+    border: 1px solid rgb(67 17 27 / 18%);
+    border-radius: var(--radius-pill);
+    color: var(--color-wine-dark);
+    background: var(--color-cream);
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition:
+        color var(--transition-fast),
+        background-color var(--transition-fast),
+        border-color var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.treatment-option-card p + .treatment-option-card__button {
+    margin-top: 1.25rem;
+}
+
+.treatment-option-card__button:hover {
+    border-color: var(--color-wine-dark);
+    color: var(--color-white);
+    background: var(--color-wine-dark);
+    transform: translateY(-0.0625rem);
+}
+
+.treatment-option-card__button:focus-visible,
+.treatments-cta__button:focus-visible {
+    outline: 0.1875rem solid var(--color-gold);
+    outline-offset: 0.1875rem;
+}
+
+.treatments-cta {
+    padding-block: clamp(3rem, 7vw, 5rem);
+    color: var(--color-white);
+    background: var(--color-wine-dark);
+}
+
+.treatments-cta__inner {
+    display: grid;
+    gap: 1.75rem;
+    align-items: center;
+}
+
+.treatments-cta .eyebrow {
+    color: var(--color-gold);
+}
+
+.treatments-cta h2 {
+    max-width: 44rem;
+    color: var(--color-white);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.08;
+}
+
+.treatments-cta h2 + p {
+    max-width: 42rem;
+    margin-top: 1rem;
+    color: rgb(255 255 255 / 74%);
+}
+
+.treatments-cta__button {
+    width: 100%;
+    min-height: 3.25rem;
+    color: var(--color-wine-dark);
+    background: var(--color-white);
+    box-shadow: none;
+}
+
+.treatments-cta__button:hover {
+    color: var(--color-wine-dark);
+    background: var(--color-gold);
+}
+
+@media (min-width: 48rem) {
+    .treatments-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem;
+    }
+
+    .treatment-option-card__content {
+        padding: 1.5rem;
+    }
+
+    .treatments-cta__inner {
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 3rem;
+    }
+
+    .treatments-cta__button {
+        width: auto;
+        max-width: 20rem;
+    }
+}
+
+@media (min-width: 70rem) {
+    .treatments-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.75rem;
+    }
+}
+
+@media (max-width: 26.875rem) {
+    .treatments-hero {
+        padding-block: 3.25rem;
+    }
+
+    .treatments-hero h1 {
+        font-size: clamp(2.15rem, 11vw, 2.75rem);
+    }
+
+    .treatment-option-card__content {
+        padding: 1.2rem;
+    }
+
+    .treatment-option-card__button {
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .treatment-option-card,
+    .treatment-option-card__image img,
+    .treatment-option-card__button {
+        transition: none;
+    }
+}

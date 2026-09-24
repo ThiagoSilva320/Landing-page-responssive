@@ -1,0 +1,624 @@
+/* 1440px */
+@media (max-width: 90rem) {
+    :root {
+        --gutter: clamp(1.5rem, 3vw, 2rem);
+    }
+}
+
+/* 1280px */
+@media (max-width: 80rem) {
+    :root {
+        --section-space: clamp(4rem, 7vw, 6rem);
+    }
+
+    .hero__inner {
+        column-gap: 2rem;
+    }
+
+    .hero__title {
+        font-size: clamp(2.7rem, 4vw, 2.85rem);
+    }
+
+    .clinic-story__grid {
+        grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.2fr) minmax(9rem, 0.42fr);
+    }
+}
+
+/* 1024px */
+@media (max-width: 64rem) {
+    :root {
+        --space-xl: 3.5rem;
+    }
+
+    .site-header__inner {
+        gap: var(--space-sm);
+    }
+
+    .main-navigation ul {
+        gap: var(--space-sm);
+    }
+
+    .header-cta {
+        padding-inline: var(--space-sm);
+    }
+
+    .hero__inner {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    }
+
+    .hero__title {
+        font-size: clamp(2.625rem, 4.65vw, 3rem);
+    }
+
+    .hero__description {
+        font-size: var(--font-size-base);
+    }
+
+    .hero__actions .btn {
+        flex: 1 1 0;
+        min-width: 0;
+        padding-inline: 0.75rem;
+    }
+
+    .hero__actions {
+        flex-wrap: nowrap;
+    }
+
+    .hero-media {
+        min-height: 0;
+    }
+
+    .hero-trust li {
+        padding-inline: var(--space-sm);
+    }
+
+    .hero-media__quote {
+        right: 0.75rem;
+        font-size: 1.05rem;
+    }
+
+    .hero-media__note {
+        right: 0.5rem;
+        width: 10.5rem;
+        padding: 0.75rem 1rem;
+    }
+
+    .differentials article {
+        padding-inline: 1rem;
+    }
+
+    .home-treatment-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .clinic-story__grid {
+        height: auto;
+        grid-template-columns: 0.82fr 1.18fr;
+    }
+
+    .clinic-story__note {
+        grid-column: 1 / -1;
+        min-height: 7rem;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 0;
+        border-top: 1px solid var(--color-border);
+    }
+
+    .clinic-story__note p,
+    .clinic-story__note small {
+        margin-top: 0;
+    }
+
+    .insurance__inner {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .family-proof__grid {
+        grid-template-columns: minmax(0, 0.48fr) minmax(0, 0.52fr);
+    }
+
+    .patient-reviews__header {
+        grid-template-columns: 1fr auto;
+    }
+
+    .reviews-link {
+        grid-column: 1 / -1;
+        justify-self: start;
+    }
+
+    .treatment-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* 768px */
+@media (max-width: 48rem) {
+    :root {
+        --gutter: 1.25rem;
+        --section-space: 4rem;
+    }
+
+    h1 {
+        font-size: clamp(2.5rem, 11vw, 4rem);
+    }
+
+    .section-header {
+        display: grid;
+        align-items: start;
+        gap: var(--space-md);
+        margin-bottom: var(--space-md);
+    }
+
+    .section-description {
+        font-size: var(--font-size-base);
+    }
+
+    .site-header__inner {
+        position: relative;
+        min-height: 4.25rem;
+    }
+
+    .menu-toggle {
+        position: relative;
+        z-index: 62;
+        display: inline-flex;
+        border-color: rgb(122 24 48 / 22%);
+        color: var(--color-wine);
+    }
+
+    .menu-toggle:hover {
+        color: var(--color-wine-dark);
+    }
+
+    .main-navigation {
+        position: absolute;
+        z-index: 60;
+        top: 100%;
+        right: auto;
+        left: 50%;
+        display: none;
+        width: 100vw;
+        max-height: calc(100dvh - 4.25rem);
+        overflow-y: auto;
+        gap: 0;
+        padding: var(--space-sm) var(--gutter) var(--space-md);
+        border-top: 1px solid var(--color-border);
+        background: var(--color-off-white);
+        box-shadow: var(--shadow-soft);
+        transform: translateX(-50%);
+    }
+
+    .main-navigation.is-open {
+        display: grid;
+    }
+
+    .main-navigation ul {
+        position: static;
+        display: grid;
+        gap: 0;
+        transform: none;
+    }
+
+    .main-navigation ul a {
+        min-height: 3rem;
+        width: 100%;
+        color: var(--color-text-muted);
+    }
+
+    .main-navigation ul a::after {
+        right: auto;
+        bottom: 0.25rem;
+        width: 2rem;
+        transform-origin: left;
+    }
+
+    .main-navigation ul a:hover,
+    .main-navigation ul a[aria-current="page"] {
+        color: var(--color-wine-dark);
+    }
+
+    .main-navigation .header-cta {
+        width: 100%;
+        margin-top: var(--space-sm);
+    }
+
+    body.menu-open {
+        overflow: hidden;
+    }
+
+    .hero__inner {
+        height: auto;
+        min-height: auto;
+        grid-template-areas:
+            "content"
+            "media"
+            "trust";
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .hero__actions {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .hero__actions .btn {
+        width: 100%;
+    }
+
+    .hero__content {
+        padding: 2.25rem 0 1.25rem;
+    }
+
+    .hero__title {
+        max-width: none;
+        font-size: 2.25rem;
+    }
+
+    .hero__title-line {
+        white-space: normal;
+    }
+
+    .hero-media {
+        min-height: 0;
+        margin-block: var(--space-sm) var(--space-lg);
+        aspect-ratio: 16 / 10;
+        border-radius: 0.625rem;
+        background-image:
+            linear-gradient(rgb(248 241 235 / 78%), rgb(248 241 235 / 78%)),
+            url("../img/referencia/clinica-consultorio-hd.png");
+    }
+
+    .hero-media img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        margin: 0;
+        object-fit: cover;
+        object-position: 68% center;
+        -webkit-mask-image: none;
+        mask-image: none;
+        transform: translate(-50%, -50%);
+    }
+
+    .hero-media::before {
+        content: none;
+    }
+
+    .hero-media__quote,
+    .hero-media__note {
+        display: none;
+    }
+
+    .hero-trust {
+        margin-top: 0;
+        padding-bottom: var(--space-xl);
+    }
+
+    .differentials__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding-block: 0.5rem;
+    }
+
+    .differentials article {
+        min-height: 4.5rem;
+    }
+
+    .differentials article:nth-child(3) {
+        border-left: 0;
+    }
+
+    .differentials article:nth-child(n + 3) {
+        border-top: 1px solid rgb(255 255 255 / 20%);
+    }
+
+    .home-treatments {
+        padding-block: 2.5rem;
+    }
+
+    .clinic-story__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .clinic-story__content {
+        padding-right: 0;
+    }
+
+    .clinic-gallery {
+        min-height: 28rem;
+    }
+
+    .insurance__inner {
+        grid-template-columns: 1fr;
+    }
+
+    .insurance__logos {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .family-proof__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pediatric-promo {
+        min-height: 18rem;
+    }
+
+    .patient-reviews {
+        padding: 2rem var(--gutter);
+    }
+
+    .location__inner {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+    }
+
+    .location__content {
+        max-width: 36rem;
+    }
+
+    .location__map,
+    .location__map iframe {
+        min-height: 22rem;
+    }
+
+    .site-footer__inner {
+        display: grid;
+        gap: var(--space-lg);
+    }
+
+    .treatment-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-mobile-block {
+        width: 100%;
+    }
+
+    .whatsapp-float {
+        right: var(--space-sm);
+        bottom: var(--space-sm);
+    }
+}
+
+/* 430px */
+@media (max-width: 26.875rem) {
+    :root {
+        --space-lg: 2rem;
+        --space-xl: 3rem;
+        --section-space: 3.5rem;
+    }
+
+    .page-intro {
+        padding-block: var(--space-xl);
+    }
+
+    .hero__content {
+        padding-top: 2rem;
+    }
+
+    .hero__content .eyebrow {
+        margin-bottom: var(--space-sm);
+    }
+
+    .hero__description {
+        margin-top: var(--space-sm);
+    }
+
+    .hero__actions {
+        display: grid;
+        gap: var(--space-xs);
+        margin-top: var(--space-md);
+    }
+
+    .hero__actions .btn {
+        width: 100%;
+    }
+
+    .hero-media {
+        margin-top: var(--space-sm);
+        aspect-ratio: 16 / 9;
+    }
+
+    .hero-media__placeholder {
+        padding: var(--space-md);
+    }
+
+    .hero-media::after {
+        right: var(--space-md);
+        width: 4rem;
+    }
+
+    .hero-trust {
+        grid-template-columns: 1fr;
+        padding-top: 0;
+    }
+
+    .hero-trust li,
+    .hero-trust li:first-child {
+        min-height: 4.5rem;
+        justify-content: flex-start;
+        padding: var(--space-sm) 0;
+    }
+
+    .hero-trust li + li {
+        border-top: 1px solid var(--color-border);
+        border-left: 0;
+    }
+
+    .hero-media__quote {
+        font-size: 0.875rem;
+    }
+
+    .hero-media__note {
+        width: 9.5rem;
+        padding: 0.65rem 0.875rem;
+    }
+
+    .hero-media__note strong {
+        font-size: 0.9375rem;
+    }
+
+    .differentials__grid {
+        grid-template-columns: 1fr;
+        padding-block: 0.25rem;
+    }
+
+    .differentials article,
+    .differentials article:first-child {
+        min-height: 4rem;
+        padding-inline: 0;
+    }
+
+    .differentials article + article,
+    .differentials article:nth-child(3) {
+        border-top: 1px solid rgb(255 255 255 / 20%);
+        border-left: 0;
+    }
+
+    .home-section-heading h2 {
+        font-size: 2rem;
+    }
+
+    .home-treatment-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home-treatment-card {
+        grid-template-rows: 10rem minmax(10rem, 1fr);
+    }
+
+    .clinic-gallery {
+        min-height: 24rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1.2fr 0.8fr;
+    }
+
+    .clinic-gallery__large {
+        grid-row: auto;
+        grid-column: 1 / -1;
+    }
+
+    .clinic-story__note {
+        display: block;
+    }
+
+    .clinic-story__note p {
+        margin-top: 0.5rem;
+    }
+
+    .clinic-story__note small {
+        display: block;
+        margin-top: 1rem;
+    }
+
+    .insurance__logos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .pediatric-promo {
+        grid-template-columns: 38% 62%;
+    }
+
+    .patient-reviews__header,
+    .review-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .location {
+        padding-block: 3rem;
+    }
+
+    .location__map,
+    .location__map iframe {
+        min-height: 19rem;
+    }
+
+    .location__route {
+        width: 100%;
+    }
+
+    .reviews-link {
+        justify-self: stretch;
+        text-align: center;
+    }
+
+    .card-content,
+    .treatment-card {
+        padding: 1.25rem;
+    }
+
+    .whatsapp-float {
+        min-height: 2.75rem;
+        padding-inline: var(--space-sm);
+    }
+}
+
+/* 390px */
+@media (max-width: 24.375rem) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .site-brand {
+        max-width: 13rem;
+    }
+
+    .site-brand__mark {
+        width: 2.375rem;
+        height: 2.375rem;
+        flex-basis: 2.375rem;
+    }
+
+    .site-brand__text strong {
+        font-size: 0.875rem;
+    }
+
+    .site-brand__text small {
+        font-size: 0.4375rem;
+    }
+
+    .hero__title {
+        font-size: 2.25rem;
+    }
+
+    .hero-media__quote {
+        font-size: 0.75rem;
+    }
+}
+
+/* 375px */
+@media (max-width: 23.4375rem) {
+    :root {
+        --gutter: 1rem;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
